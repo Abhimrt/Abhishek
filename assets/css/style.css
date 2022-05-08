@@ -78,12 +78,14 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   transition: ease-in-out 0.3s;
+  transition: ease-in-out 1s transform;
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  transform: scale(0);
 }
 #header .container{
   display: flex;

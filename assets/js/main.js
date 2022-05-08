@@ -280,6 +280,7 @@ var loader = document.querySelector(".preloader");
 window.addEventListener("load",()=>{
     setInterval(()=>{
       loader.classList.add("show");
+      document.querySelector("#header").style.transform="scale(1)";
     },2000)
     setInterval(()=>{
       loader.style.display="none";
