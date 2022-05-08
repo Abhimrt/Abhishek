@@ -279,6 +279,9 @@ document.getElementById("submit").addEventListener("click", () => {
 var loader = document.querySelector(".preloader");
 window.addEventListener("load",()=>{
     setInterval(()=>{
-      loader.style.display="none";
+      loader.classList.add("show");
     },2000)
+    setInterval(()=>{
+      loader.style.display="none";
+    },3000)
 })

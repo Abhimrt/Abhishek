@@ -49,6 +49,30 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 999999999;
   display: block;
 }
+.show{
+  transform: scale(0);
+  animation: scale 1.6s ;
+  opacity: 0;
+}
+@keyframes scale {
+  0%{
+    transform: scale(1);
+    opacity: .8;
+    display: block;
+  }
+  90%{
+    transform: scale(10);
+    opacity: 0;
+    display: block;
+  }
+  95%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(0);
+  }
+  
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
