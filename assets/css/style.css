@@ -11,7 +11,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background-color: black̀;
+  background-color: black;
   /* background:  linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url("../img/bg1.jpeg") top right no-repeat;
   background-size: cover; */
   left: 0;
@@ -40,7 +40,15 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
+/* .preloader ----------------------------------- */
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black url("../img/loader.gif") no-repeat center center;
+  z-index: 999999999;
+  display: block;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
