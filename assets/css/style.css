@@ -7,13 +7,12 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  z-index: 1;
 }
 body::before {
   content: "";
   position: fixed;
   background-color: black;
-  /* background:  linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url("../img/bg1.jpeg") top right no-repeat;
-  background-size: cover; */
   left: 0;
   right: 0;
   top: 0;
@@ -96,6 +95,9 @@ h1, h2, h3, h4, h5, h6 {
 #header .container .rc{
   width: 50%;
   height: 50vh;
+}
+#header .container .lc{
+  z-index: 99;
 }
 #header * {
   transition: ease-in-out 0.3s;
@@ -180,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   background: rgba(0, 0, 0, 0.9);
 }
+
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
 }
@@ -194,6 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-top .navbar {
   margin: 0;
 }
+
 @media (max-width: 768px) {
   #header.header-top {
     height: 60px;
@@ -201,6 +205,13 @@ h1, h2, h3, h4, h5, h6 {
   #header.header-top h1 {
     font-size: 26px;
   }
+   .header-top .rc{
+    display: none;
+  }
+  .header-top .anime{
+  animation: anime 1.5s infinite;
+  transform: scale(1);
+}
 }
 
 /*--------------------------------------------------------------
@@ -296,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
-  z-index: 999;
+  z-index: 9999;
   margin-top: 0;
 }
 .navbar-mobile .mobile-nav-toggle {
@@ -307,7 +318,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
+  height: 90vh;
+  top: 0px;
   right: 15px;
   bottom: 45px;
   left: 15px;
@@ -326,6 +338,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   position: relative;
 }
+.header-top .navbar{
+  transition: .3s all ease;
+  transform: scale(0);
+}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -338,13 +354,15 @@ section {
   bottom: 100%;
   opacity: 0;
   transition: ease-in-out 0.4s;
-  z-index: 2;
+  z-index: -1;
 }
 section.section-show {
+  position: absolute;
   top: 100px;
   bottom: auto;
   opacity: 1;
   padding-bottom: 45px;
+  z-index: -1;
 }
 section .container {
   background: rgba(0, 0, 0, 0.9);
@@ -1079,17 +1097,29 @@ button:active{
 .credits a:hover {
   color: #fff;
 }
-#anima{
-  animation: bounce 1s infinite;
+
+@keyframes anime {
+  0%{
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(1);
+  }
+  
+  30%{
+    transform: scale(1.05);
+  }
+  40%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  60%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 }
-@keyframes bounce {
-            0% {
-                transform: translate3d(20px, 0, 0);
-            }
-            50% {
-                transform: translate3d(0px, 0, 0px);
-            }
-            100% {
-                transform: translate3d(20px, 0, 0);
-            }
-        }
