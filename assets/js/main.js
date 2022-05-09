@@ -276,7 +276,6 @@ document.getElementById("submit").addEventListener("click", () => {
   });
 });
 // =================pre loader======================== 
-
 var loader = document.querySelector(".preloader");
 window.addEventListener("load",()=>{
     setInterval(()=>{
