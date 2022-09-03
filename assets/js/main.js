@@ -1,3 +1,4 @@
+window.location.href = "https://abhimrt.github.io/Portfolio/";
 (function() {
   "use strict";
 
